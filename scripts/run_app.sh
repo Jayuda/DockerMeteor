@@ -8,6 +8,7 @@ if [ -d /bundle ]; then
   tar xzf *.tar.gz
   chmod 777 -R /bundle/bundle/programs/server/
   cd /bundle/bundle/programs/server/
+  chmod 777 -R *
   npm uninstall node-pre-gyp --save
   npm install @mapbox/node-pre-gyp --save
   npm install bcrypt@5.0.1 --save
