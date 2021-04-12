@@ -6,6 +6,7 @@ if [ -d /bundle ]; then
   echo "MASUK ZONE 1"
   cd /bundle
   tar xzf *.tar.gz
+  sudo chmod 777 -R /bundle/bundle/programs/server/
   cd /bundle/bundle/programs/server/
   npm uninstall node-pre-gyp --save
   npm install @mapbox/node-pre-gyp --save
