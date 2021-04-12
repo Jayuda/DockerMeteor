@@ -2,7 +2,7 @@ FROM debian:stretch
 MAINTAINER Y.Nunung Pamungkas Jayuda<nunung.pamungkas@vneu.co.id>
 
 ENV METEORD_DIR /opt/meteord
-RUN mkdir $METEORD_DIR/lib
+RUN mkdir -p $METEORD_DIR/lib
 COPY scripts/lib/* $METEORD_DIR/lib
 
 RUN bash $METEORD_DIR/lib/install_base.sh
