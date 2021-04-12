@@ -10,8 +10,8 @@ if [ -d /bundle ]; then
   cd /bundle/bundle/programs/server/
   chmod 777 -R *
   npm uninstall node-pre-gyp --save
-  npm install @mapbox/node-pre-gyp --save
-  npm install bcrypt@5.0.1 --save
+  npm install @mapbox/node-pre-gyp --save --unsafe-perm
+  npm install bcrypt@5.0.1 --save --unsafe-perm
   echo "Install npm Zone 1"
   npm install --unsafe-perm
   cd /bundle/bundle/
