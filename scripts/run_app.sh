@@ -6,9 +6,8 @@ if [ -d /bundle ]; then
   echo "MASUK ZONE 1"
   cd /bundle
   tar xzf *.tar.gz
-  chmod 777 -R /bundle/bundle/programs/server/
   cd /bundle/bundle/programs/server/
-  chmod 777 -R *
+  npm install -g node-gyp --unsafe-perm
   npm uninstall node-pre-gyp --save
   npm install @mapbox/node-pre-gyp --save --unsafe-perm
   npm install bcrypt@5.0.1 --save --unsafe-perm
