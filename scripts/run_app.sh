@@ -7,28 +7,8 @@ if [ -d /bundle ]; then
   cd /bundle
   tar xzf *.tar.gz
   cd /bundle/bundle/programs/server/
-  npm install -g node-gyp --unsafe-perm
-  npm uninstall node-pre-gyp --save
-  npm install @mapbox/node-pre-gyp --save --unsafe-perm
-  npm install bcrypt@5.0.1 --save --unsafe-perm
-  echo "Install npm Zone 1"
   npm install --unsafe-perm
   cd /bundle/bundle/
-fi
-
-if [[ $REBUILD_NPM_MODULES ]]; then
-  echo "MASUK ZONE 4"
-  if [ -f /opt/meteord/rebuild_npm_modules.sh ]; then
-    echo "MASUK ZONE 5"
-    cd programs/server
-    npm uninstall node-pre-gyp --save
-    npm install @mapbox/node-pre-gyp --save
-    bash /opt/meteord/rebuild_npm_modules.sh
-    cd ../../
-  else
-    echo "Build for binary bulding."
-    exit 1
-  fi
 fi
 
 # Set a delay to wait to start meteor container
