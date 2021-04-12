@@ -12,7 +12,6 @@ ENV NODE_VERSION ${NODE_VERSION:-12.22.1}
 ONBUILD ENV NODE_VERSION ${NODE_VERSION:-12.22.1}
 
 RUN bash $METEORD_DIR/lib/install_node.sh
-RUN bash $METEORD_DIR/lib/install_meteor.sh
 RUN bash $METEORD_DIR/lib/cleanup.sh
 
 RUN apt-get install -y tzdata
