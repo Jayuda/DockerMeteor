@@ -7,9 +7,9 @@ if [ -d /bundle ]; then
   cd /bundle
   tar xzf *.tar.gz
   cd /bundle/bundle/programs/server/
-  npm install --unsafe-perm
   npm uninstall node-pre-gyp --save
   npm install @mapbox/node-pre-gyp --save
+  npm install --unsafe-perm
   cd /bundle/bundle/
 elif [[ $BUNDLE_URL ]]; then
   echo "MASUK ZONE 2"
